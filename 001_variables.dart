@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main() {
   var name = "Anupam";
   print(name);
