@@ -117,3 +117,121 @@ void printHello(var str, {String? extraStr="##"}) {
   print("Hello $str $extraStr");
 }
 ```
+
+### Decision making
+```dart
+import 'dart:io';
+
+void main(List<String> args) {
+
+  print('Enter a number');
+    var line = stdin.readLineSync();
+    int a = int.parse(line!);
+     
+    if(a<0){
+        print('$a is negative number.');
+    } else if(a==0) {
+        print('$a is zero. Neither negative nor positive');
+    } else {
+        print('$a is positive number.');
+    }
+
+  var command = 'OPEN';
+  switch (command) {
+    case 'CLOSED':
+      print("executeClosed");
+      break;
+    case 'PENDING':
+      print("executePending");
+      break;
+    case 'APPROVED':
+      print("executeApproved");
+      break;
+    case 'DENIED':
+      print("executeDenied");
+      break;
+    case 'OPEN':
+      print("executeOpen");
+      break;
+    default:
+      print("executeUnknown");
+  }
+}
+```
+
+### Loops
+```dart
+void main(List<String> args) {
+  var list1 = ['A', 'B', 'C', 'D'];
+  for (var character in list1)
+    print(character); 
+  
+  for (var i = 0; i < 10; i++) {
+    print(i);
+  }
+}
+```
+
+
+### Classes and objects
+```dart
+void main(List<String> args) {
+  Vehicle car = new Vehicle("V6");
+  SuperCar superCar = new SuperCar("V12");
+  car.display();
+  superCar.display();
+}
+
+class Vehicle {
+  String engine;
+
+  Vehicle(this.engine);
+  void display() {
+    print(engine);
+  }
+}
+
+class SuperCar extends Vehicle{
+  SuperCar(String engine) : super(engine);
+}
+```
+
+### Maps
+```dart
+void main(List<String> args) {
+  var cars = {"Tesla":14, "Toyota":23};
+  print(cars);
+
+  var supercars = new Map();
+  supercars["porshe"] = 12;
+  supercars["mclaren"] = 41;
+
+  print(supercars);
+  print(supercars["porshe"]);
+}
+```
+
+### Lists
+```dart
+void main(List<String> args) {
+  var list = ["A", "B", "C"];
+  list.add("K");
+  print(list);
+  print(list.first);
+  print(list.last);
+  print(list.isEmpty);
+  print(list.length);
+}
+```
+
+### Future
+```dart
+```
+
+### Async-Await
+```dart
+```
+
+### Null safety
+```dart
+```
